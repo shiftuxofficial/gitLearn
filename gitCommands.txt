@@ -69,3 +69,32 @@ git commit -m "message"
 git push
 _____________________________________
 
+To Show the origin and Destination:
+
+git remote -v
+
+To remove an origin or destination
+
+git remote rm destination
+git remote rm origin
+________________________________________
+
+# Add a new remote upstream repository
+git remote add upstream [Parent Repo Link]
+
+# Sync your fork
+git fetch upstream
+git checkout master
+git merge upstream/master
+
+git push -u origin
+_____________________________________
+
+#Change the authorized github account with git
+
+Control Pannel > User Accounts > Credential Manager
+> Windows Credentials > git:https://github.com 
+
+#Remove it
+#So when try to push stuff to a repo. It will ask for authorization again
+__________________________________________________
