@@ -50,9 +50,9 @@ _____________________________________________
 Pull and Merge (for changed files):
 
 git init
-//fork the repo
+#fork the repo
 git pull [link]
-//change in file
+#change in file
 git add .
 git commit -m "message"
 git remote add origin [link]
@@ -63,7 +63,7 @@ For copying repo in local and pushing files in repo:
 git init
 git clone [url]
 cd [path] //to enter the working directory
-//change in a file or add a new file
+#change in a file or add a new file
 git add .
 git commit -m "message"
 git push
