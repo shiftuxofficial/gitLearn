@@ -98,3 +98,17 @@ Control Pannel > User Accounts > Credential Manager
 #Remove it
 #So when try to push stuff to a repo. It will ask for authorization again
 __________________________________________________
+
+# For making changes in a different branch of an existing repo:
+
+git clone [link]
+cd [path]
+#git pull [link]
+git branch #to see all branches
+git branch -c [branch name] #new branch created
+git checkout [branch name] #to make the new branch as new working directory
+# change in file
+git add .
+git commit -m [message]
+git push origin head #to push in the new branch
+_______________________________________
