@@ -27,7 +27,7 @@ Git is a powerful, widely-used version control system that helps developers mana
 
 This Repo includes all the necessary steps to use git. It is more of a cheatsheet created and regularly updated by developers & designers at Shiftux.  
 
-[click-me](https://github.com/shiftuxofficial/gitLearn/blob/main/gitCommands.txt)  
+[click-me](https://github.com/Debang5hu/gitLearn/blob/main/gitCommands.md)  
 
 ## Install Git:  
 
