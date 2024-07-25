@@ -134,3 +134,25 @@ git commit -m "message"
 git remote add origin<repo link>
 git push -u origin main
 __________________________________________________
+# For pushing larger files (size>100MB)
+
+## Make sure git is installed
+
+## Download Git Large File Storage
+https://git-lfs.com/
+
+## Install it
+
+## Open terminal and run
+git lfs install
+
+git lfs track "*.<extension of large file>"
+eg: git lfs track "*.safetensors"
+
+git add .gitattributes
+
+git add <filename>.safetensors
+eg: git add model.safetensors
+
+git commit -m "Add large file"
+git push origin main
