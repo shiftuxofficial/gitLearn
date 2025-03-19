@@ -6,46 +6,54 @@ This Repo includes all the necessary steps to use git. It is more of a cheatshee
 https://www.git-scm.com/
 
 __________________________________________________
-## Set username:
-Open git and type-
+## Open git to configure-
+### Set username:
 ```
 git config --global user.name "yourUserName"
 ```
-## Set email:
+### Set email:
 ```
 git config --global user.email "youremail@domain.com"
 ```
 
-## Check if username is set:
+### Check if username is set:
 ```
 git config user.name
 ```
 
-## Check if email is set:
+### Check if email is set:
 ```
 git config user.email
 ```
 __________________________________________________
 ## Commit files to repo (if no files are there):
+### Initializing working directory as local repo:
 ```
 git init
-git add README.md
 ```
-Stage all files:
+### To know files are staged or not:
+```
+git status
+```
+### Stage all files:
 ```
 git add .
 ```
-Stage single file:
+### Stage single file:
 ```
 git add [file name]
 ```
+### Give commit message:
 ```
 git commit -m "message"
+```
+### Push to remote repo:
+```
 git branch -M main
 git remote add origin [URL]
 git push -u origin main
 ```
-
+________________________________________________________
 ## Commit files to repo (if files are there):
 ```
 git init
@@ -61,44 +69,43 @@ git remote add origin [URL]
 git pull origin main --allow-unrelated-histories
 git push -u origin main
 ```
-
+_______________________________________________
 ## Pull and Merge (for changed files):
 ```
 git init
 ```
-Fork the repo
+### Fork the repo and pull the contents:
 ```
 git pull [URL]
 ```
-Make changes in files
+### Make changes in files and push:
 ```
 git add .
 git commit -m "message"
 git remote add origin [URL]
 git push -u origin master
 ```
-
+___________________________________________________________
 ## For copying repo in local and pushing files in repo:
 ```
 git init
 git clone [URL]
 ```
-Enter the local repo:
+### Go to the local repo:
 ```
 cd [path]
 ```
-Change in a file or add a new file:
+### Change in a file or add a new file:
 ```
 git add .
 git commit -m "message"
 git push
 ```
 __________________________________________________
-## To Show the origin and Destination:
+## To show the origin and destination:
 ```
 git remote -v
 ```
-
 ## To remove destination:
 ```
 git remote rm destination
@@ -112,7 +119,7 @@ __________________________________________________
 ```
 git remote add upstream [Parent Repo URL]
 ```
-
+___________________________________________________
 ## Sync your fork:
 ```
 git fetch upstream
@@ -123,8 +130,8 @@ git push -u origin
 __________________________________________________
 ## Change the authorized github account with git:
 
-Control Pannel > User Accounts > Credential Manager > Windows Credentials > git: https://github.com 
-Remove it<br>
+`Control Pannel > User Accounts > Credential Manager > Windows Credentials > git: https://github.com`
+### Remove it
 So when try to push stuff to a repo. It will ask for authorization again
 
 __________________________________________________
@@ -132,26 +139,42 @@ __________________________________________________
 ```
 git clone [URL]
 cd [path]
-#git pull [URL]
-git branch #to see all branches
-git branch -c [branch name] #new branch created
-git checkout [branch name] #to make the new branch as new working directory
-# change in file
+git pull [URL]
+```
+### To see all branches:
+```
+git branch
+```
+### Create new branch:
+```
+git branch -c [branch name]
+```
+### To make the new branch as new working directory:
+```
+git checkout [branch name] 
+```
+### Make changes in file, then stage and commit:
+```
 git add .
 git commit -m [message]
-git push origin head #to push in the new branch
 ```
-
+### To push in the new branch:
+```
+git push origin head
+```
+____________________________________________________
 ## For Push Content Into Private Contributor repository:
 ```
-create folder
-open terminal
+mkdir [folder name]
+cd [folder name]
 git init
-git pull <repo URL>
-//Change in file
+git pull [URL]
+```
+### Make changes in file and commit:
+```
 git add .
 git commit -m "message"
-git remote add origin<repo URL>
+git remote add origin [URL]
 git push -u origin main
 ```
 __________________________________________________
@@ -163,7 +186,7 @@ __________________________________________________
 https://git-lfs.com/
 
 ## Configure Git-LFS:
-Open CMD and run:
+### Open CMD and run:
 ```
 git lfs install
 ```
