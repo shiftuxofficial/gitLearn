@@ -35,15 +35,23 @@ git init
 ```
 git status
 ```
-### Stage all files:
+### Stage all new & modified files:
 ```
 git add .
 ```
-### Stage single file:
+### Stage new or modified single file:
 ```
 git add [file name]
 ```
-### Give commit message:
+### Stage single deleted file
+```
+git rm [file name]
+```
+### Stage all modified or deleted files
+```
+git add -u
+```
+### Commit with message:
 ```
 git commit -m "message"
 ```
@@ -176,6 +184,42 @@ git add .
 git commit -m "message"
 git remote add origin [URL]
 git push -u origin main
+```
+__________________________________________________
+## Undo commits:
+### For last n commits and keep files staged:
+```
+git reset --soft HEAD~[n]
+```
+### For last n commits and unstage changes:
+```
+git reset --mixed HEAD~[n]
+```
+### For last n commits and delete changes in code:
+```
+git reset --hard HEAD~[n]
+```
+### Delete the push from GitHub (careful if working with team):
+```
+git push origin main --force
+```
+__________________________________________________
+## Commit with a desired date:
+### Replace old commit:
+```
+GIT_AUTHOR_DATE="[YYYY:MM:DD]T[hh:mm:ss]" GIT_COMMITTER_DATE="[YYYY:MM:DD]T[hh:mm:ss]" git commit --amend --no-edit --date="[YYYY:MM:DD]T[hh:mm:ss]"
+```
+### Force push amended commit (careful if working with team):
+```
+git push --force
+```
+### For New commit:
+```
+GIT_AUTHOR_DATE="[YYYY:MM:DD]T[hh:mm:ss]" GIT_COMMITTER_DATE="[YYYY:MM:DD]T[hh:mm:ss]" git commit -m "message"
+```
+### Push:
+```
+git push
 ```
 __________________________________________________
 # For pushing larger files (size>100MB)
