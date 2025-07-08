@@ -204,18 +204,18 @@ git reset --hard HEAD~[n]
 git push origin main --force
 ```
 __________________________________________________
-## Commit with a desired date:
-### Replace old commit:
+## Commit with a desired date: 
+### Replace old commit (for git bash):
 ```
-GIT_AUTHOR_DATE="[YYYY:MM:DD]T[hh:mm:ss]" GIT_COMMITTER_DATE="[YYYY:MM:DD]T[hh:mm:ss]" git commit --amend --no-edit --date="[YYYY:MM:DD]T[hh:mm:ss]"
+GIT_AUTHOR_DATE="[YYYY-MM-DD]T[hh:mm:ss]" GIT_COMMITTER_DATE="[YYYY-MM-DD]T[hh:mm:ss]" git commit --amend --no-edit --date="[YYYY-MM-DD]T[hh:mm:ss]"
 ```
 ### Force push amended commit (careful if working with team):
 ```
 git push --force
 ```
-### For New commit:
+### For New commit (for git bash):
 ```
-GIT_AUTHOR_DATE="[YYYY:MM:DD]T[hh:mm:ss]" GIT_COMMITTER_DATE="[YYYY:MM:DD]T[hh:mm:ss]" git commit -m "message"
+GIT_AUTHOR_DATE="[YYYY-MM-DD]T[hh:mm:ss]" GIT_COMMITTER_DATE="[YYYY-MM-DD]T[hh:mm:ss]" git commit -m "message"
 ```
 ### Push:
 ```
